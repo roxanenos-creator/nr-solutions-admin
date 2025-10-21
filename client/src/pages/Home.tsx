@@ -50,6 +50,15 @@ export default function Home() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
+              {/* Photo badge à gauche au-dessus du titre */}
+              <div className="flex justify-start mb-6">
+                <img 
+                  src="/roxane-badge-bw.jpg" 
+                  alt="Roxane - Bras droit administratif et financier à Biarritz, Pays Basque" 
+                  className="w-40 h-40 rounded-full object-cover object-top border-[6px] border-accent shadow-2xl"
+                />
+              </div>
+              
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
                 Bras droit administratif et financier à Arbonne - Biarritz
               </h1>
@@ -66,16 +75,9 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Photo badge et workspace à droite */}
-            <div className="relative flex flex-col items-center gap-8">
-              <div className="relative">
-                <img 
-                  src="/roxane-badge-bw.jpg" 
-                  alt="Roxane - Bras droit administratif et financier à Biarritz, Pays Basque" 
-                  className="w-56 h-56 rounded-full object-cover object-top border-[6px] border-accent shadow-2xl"
-                />
-              </div>
-              <div className="w-full max-w-sm">
+            {/* Workspace à droite */}
+            <div className="relative flex justify-center">
+              <div className="w-full max-w-md">
                 <img 
                   src="/workspace.jpg" 
                   alt="Gestion administrative professionnelle" 
