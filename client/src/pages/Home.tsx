@@ -74,13 +74,20 @@ export default function Home() {
       {/* Services Section */}
       <section id="services" className="py-20 bg-background">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Mes Services
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
               Un accompagnement sur mesure pour libérer votre temps et optimiser votre gestion administrative et financière
             </p>
+            <div className="max-w-3xl mx-auto mb-12">
+              <img 
+                src="/workspace.jpg" 
+                alt="Espace de travail professionnel" 
+                className="w-full rounded-lg shadow-xl"
+              />
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -374,7 +381,13 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-primary-foreground/20 mt-8 pt-6 text-center text-primary-foreground/60">
-            <p>&copy; {new Date().getFullYear()} NR Solutions Admin. Tous droits réservés.</p>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-2">
+              <p>&copy; {new Date().getFullYear()} NR Solutions Admin. Tous droits réservés.</p>
+              <span className="hidden md:inline">•</span>
+              <a href="/cgvps.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                Conditions Générales de Vente et de Prestation de Service
+              </a>
+            </div>
           </div>
         </div>
       </footer>
