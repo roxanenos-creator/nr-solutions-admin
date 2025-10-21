@@ -446,64 +446,69 @@ export default function Home() {
               </Card>
 
               <div className="space-y-6">
+                {/* Coordonnées regroupées */}
                 <Card>
-                  <CardContent className="pt-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Mail className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-primary mb-1">Email</h3>
-                        <a href="mailto:nr.solutionsadm@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">nr.solutionsadm@gmail.com</a>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card>
-                  <CardContent className="pt-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Phone className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-primary mb-1">Téléphone / WhatsApp</h3>
-                        <a href="tel:+33650974076" className="text-muted-foreground hover:text-primary transition-colors block mb-1">06 50 97 40 76</a>
-                        <a href="https://wa.me/33650974076" target="_blank" rel="noopener noreferrer" className="text-sm text-accent hover:text-primary transition-colors inline-flex items-center gap-1">
-                          <span>Contacter sur WhatsApp</span>
+                  <CardContent className="p-6">
+                    <h3 className="font-semibold text-primary mb-4">Coordonnées</h3>
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Mail className="w-4 h-4 text-primary" />
+                        </div>
+                        <a href="mailto:nr.solutionsadm@gmail.com" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                          nr.solutionsadm@gmail.com
                         </a>
                       </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Phone className="w-4 h-4 text-primary" />
+                        </div>
+                        <div>
+                          <a href="tel:+33650974076" className="text-muted-foreground hover:text-primary transition-colors text-sm block">
+                            06 50 97 40 76
+                          </a>
+                          <a href="https://wa.me/33650974076" target="_blank" rel="noopener noreferrer" className="text-xs text-accent hover:text-primary transition-colors">
+                            WhatsApp
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
 
+                {/* Zone d'intervention simplifiée */}
                 <Card>
-                  <CardContent className="pt-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-5 h-5 text-primary" />
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-3">
+                      <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <MapPin className="w-4 h-4 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-primary mb-1">Zone d'intervention</h3>
-                        <p className="text-muted-foreground mb-2">Arbonne, Biarritz et 25 km alentours</p>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          Arbonne, Biarritz, Bidart, Anglet, Bayonne, Guéthary, Ahetze, Arcangues, Bassussarry, Ascain, Ciboure, Saint-Jean-de-Luz, Urrugne, Tarnos, Boucau, Côte Basque, Pays Basque et Sud Landes.
-                        </p>
-                        <p className="text-sm text-accent mt-2 font-medium">Sur site, à distance ou formule mixte selon vos besoins</p>
+                        <h3 className="font-semibold text-primary mb-1 text-sm">Zone d'intervention</h3>
+                        <p className="text-muted-foreground text-sm">Biarritz et 25 km alentours</p>
+                        <p className="text-xs text-accent mt-1">Sur site • À distance • Mixte</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="bg-accent/10 border-accent">
-                  <CardContent className="pt-6">
-                    <h3 className="font-semibold text-primary mb-3">Disponibilité</h3>
-                    <p className="text-foreground/80 mb-4">
-                      Je suis disponible pour échanger sur vos besoins et vous proposer un accompagnement adapté à votre activité.
-                    </p>
+                {/* Calendly mise en avant */}
+                <Card className="bg-gradient-to-br from-accent/20 to-accent/10 border-2 border-accent">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-3 mb-4">
+                      <div className="w-10 h-10 bg-accent/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-primary mb-1">Réserver un créneau</h3>
+                        <p className="text-sm text-foreground/80">Échangeons sur vos besoins</p>
+                      </div>
+                    </div>
                     <Button asChild className="w-full bg-primary hover:bg-primary/90">
                       <a href="https://calendly.com/nr-solutionsadmin" target="_blank" rel="noopener noreferrer">
-                        Réserver un créneau
+                        Prendre rendez-vous
                       </a>
                     </Button>
                   </CardContent>
