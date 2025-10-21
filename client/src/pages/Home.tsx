@@ -81,7 +81,7 @@ export default function Home() {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
               Un accompagnement sur mesure pour libérer votre temps et optimiser votre gestion administrative et financière
             </p>
-            <div className="max-w-3xl mx-auto mb-12">
+            <div className="max-w-2xl mx-auto mb-12">
               <img 
                 src="/workspace.jpg" 
                 alt="Espace de travail professionnel" 
