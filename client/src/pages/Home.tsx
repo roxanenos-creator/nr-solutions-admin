@@ -144,14 +144,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:border-accent transition-all hover:shadow-lg overflow-hidden">
-              <div className="relative h-48">
-                <img 
-                  src="/financial-analysis.jpg" 
-                  alt="Analyse financière et tableaux de bord" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
               <CardContent className="pt-6 space-y-4">
                 <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-primary" />
