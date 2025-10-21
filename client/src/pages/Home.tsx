@@ -164,18 +164,11 @@ export default function Home() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
-                <img 
-                  src="/photo1.jpg" 
-                  alt="Photo professionnelle 1" 
-                  className="w-full rounded-lg shadow-lg"
-                />
-                <img 
-                  src="/photo2.jpg" 
-                  alt="Photo professionnelle 2" 
-                  className="w-full rounded-lg shadow-lg"
-                />
-              </div>
+              <img 
+                src="/profile.jpg" 
+                alt="Photo professionnelle" 
+                className="w-full max-w-md mx-auto rounded-lg shadow-2xl"
+              />
             </div>
             <div className="order-1 lg:order-2 space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-primary">
