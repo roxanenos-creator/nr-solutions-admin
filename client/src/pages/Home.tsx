@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, CheckCircle2, Clock, TrendingUp, Users } from "lucide-react";
+import { Mail, Phone, MapPin, CheckCircle2, Clock, TrendingUp, Users, FileText } from "lucide-react";
 import { useState } from "react";
 import { SEOHead } from "@/components/SEOHead";
 import { StructuredData } from "@/components/StructuredData";
@@ -90,10 +90,10 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-background min-h-screen flex items-center">
-        <div className="container">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">
+      <section id="services" className="py-12 bg-background">
+        <div className="container max-w-6xl">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-2">
               Services Administratifs Externalisés
             </h2>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
@@ -102,104 +102,210 @@ export default function Home() {
           </div>
 
           {/* Compass Center with Services Around in Circular Layout */}
-          <div className="relative max-w-5xl mx-auto">
-            {/* Services positioned around compass like cardinal points */}
-            <div className="relative grid grid-cols-3 gap-4 items-center">
-              {/* Top Row - 3 services */}
-              <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                <CardContent className="pt-4 space-y-2">
-                  <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                    <Clock className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="text-base font-semibold text-primary text-center">Gestion Administrative</h3>
-                  <p className="text-xs text-muted-foreground text-center">
-                    Messagerie, agenda, courrier, saisie, classement, rédaction.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                <CardContent className="pt-4 space-y-2">
-                  <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                    <TrendingUp className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="text-base font-semibold text-primary text-center">Gestion Financière</h3>
-                  <p className="text-xs text-muted-foreground text-center">
-                    Devis, factures, suivi paiements, préparation comptable.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                <CardContent className="pt-4 space-y-2">
-                  <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                    <Users className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="text-base font-semibold text-primary text-center">Gestion RH</h3>
-                  <p className="text-xs text-muted-foreground text-center">
-                    Contrats, congés, paie, organismes sociaux.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Middle Row - Compass in center with services on sides */}
-              <div className="col-span-3 grid grid-cols-3 gap-4 items-center">
-                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                  <CardContent className="pt-4 space-y-2">
-                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                      <CheckCircle2 className="w-5 h-5 text-primary" />
-                    </div>
-                    <h3 className="text-base font-semibold text-primary text-center">Organisation</h3>
-                    <p className="text-xs text-muted-foreground text-center">
-                      Processus, outils, tableaux de bord, efficacité.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                {/* Central Compass */}
-                <div className="flex justify-center items-center">
-                  <div className="bg-accent/10 p-4 rounded-2xl border-4 border-accent/40 shadow-2xl">
-                    <div className="flex flex-col items-center gap-3">
-                      <img 
-                        src="/compass.jpg" 
-                        alt="Gardez le cap sur votre métier" 
-                        className="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-accent/30"
-                      />
-                      <div className="text-center">
-                        <p className="text-lg font-bold text-primary mb-1">Gardez le cap</p>
-                        <p className="text-xs text-muted-foreground">Je m'occupe de l'administratif</p>
-                      </div>
+          <div className="relative max-w-4xl mx-auto">
+            {/* Desktop: Container with circular positioning */}
+            <div className="hidden md:block relative" style={{ minHeight: '600px' }}>
+              {/* Central Compass */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                <div className="bg-accent/10 p-4 rounded-2xl border-4 border-accent/40 shadow-2xl">
+                  <div className="flex flex-col items-center gap-2">
+                    <img 
+                      src="/compass.jpg" 
+                      alt="Gardez le cap sur votre métier" 
+                      className="w-28 h-28 rounded-full object-cover shadow-lg border-4 border-accent/30"
+                    />
+                    <div className="text-center">
+                      <p className="text-base font-bold text-primary mb-0.5">Gardez le cap</p>
+                      <p className="text-xs text-muted-foreground">Je m'occupe de l'administratif</p>
                     </div>
                   </div>
                 </div>
+              </div>
 
+              {/* Service Cards positioned in circle - Top (12h) */}
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2" style={{ width: '220px' }}>
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                  <CardContent className="pt-4 space-y-2">
-                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                      <Mail className="w-5 h-5 text-primary" />
+                  <CardContent className="pt-3 pb-3 space-y-1.5">
+                    <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <Clock className="w-4 h-4 text-primary" />
                     </div>
-                    <h3 className="text-base font-semibold text-primary text-center">Communication</h3>
-                    <p className="text-xs text-muted-foreground text-center">
-                      Interne, externe, rédaction, coordination.
+                    <h3 className="text-sm font-semibold text-primary text-center">Gestion Administrative</h3>
+                    <p className="text-xs text-muted-foreground text-center leading-tight">
+                      Messagerie, agenda, courrier, saisie, classement, rédaction.
                     </p>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Bottom Row - 1 service centered */}
-              <div></div>
-              <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                <CardContent className="pt-4 space-y-2">
-                  <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                    <Clock className="w-5 h-5 text-primary" />
+              {/* Top Right (2h) */}
+              <div className="absolute" style={{ top: '80px', right: '40px', width: '220px' }}>
+                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
+                  <CardContent className="pt-3 pb-3 space-y-1.5">
+                    <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <TrendingUp className="w-4 h-4 text-primary" />
+                    </div>
+                    <h3 className="text-sm font-semibold text-primary text-center">Gestion Financière</h3>
+                    <p className="text-xs text-muted-foreground text-center leading-tight">
+                      Devis, factures, suivi paiements, préparation comptable.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Right (4h) */}
+              <div className="absolute top-1/2 right-0 transform -translate-y-1/2" style={{ width: '220px' }}>
+                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
+                  <CardContent className="pt-3 pb-3 space-y-1.5">
+                    <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <Users className="w-4 h-4 text-primary" />
+                    </div>
+                    <h3 className="text-sm font-semibold text-primary text-center">Gestion RH</h3>
+                    <p className="text-xs text-muted-foreground text-center leading-tight">
+                      Contrats, congés, paie, organismes sociaux.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Bottom Right (6h) */}
+              <div className="absolute" style={{ bottom: '80px', right: '40px', width: '220px' }}>
+                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
+                  <CardContent className="pt-3 pb-3 space-y-1.5">
+                    <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <CheckCircle2 className="w-4 h-4 text-primary" />
+                    </div>
+                    <h3 className="text-sm font-semibold text-primary text-center">Organisation</h3>
+                    <p className="text-xs text-muted-foreground text-center leading-tight">
+                      Processus, outils, tableaux de bord, efficacité.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Bottom (8h) */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2" style={{ width: '220px' }}>
+                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
+                  <CardContent className="pt-3 pb-3 space-y-1.5">
+                    <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <FileText className="w-4 h-4 text-primary" />
+                    </div>
+                    <h3 className="text-sm font-semibold text-primary text-center">Accompagnement Projet</h3>
+                    <p className="text-xs text-muted-foreground text-center leading-tight">
+                      Suivi projets, coordination prestataires.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Bottom Left (10h) */}
+              <div className="absolute" style={{ bottom: '80px', left: '40px', width: '220px' }}>
+                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
+                  <CardContent className="pt-3 pb-3 space-y-1.5">
+                    <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <Mail className="w-4 h-4 text-primary" />
+                    </div>
+                    <h3 className="text-sm font-semibold text-primary text-center">Communication</h3>
+                    <p className="text-xs text-muted-foreground text-center leading-tight">
+                      Interne, externe, rédaction, coordination.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            {/* Mobile: Grid layout */}
+            <div className="md:hidden space-y-6">
+              {/* Compass at top on mobile */}
+              <div className="flex justify-center mb-8">
+                <div className="bg-accent/10 p-4 rounded-2xl border-4 border-accent/40 shadow-2xl">
+                  <div className="flex flex-col items-center gap-2">
+                    <img 
+                      src="/compass.jpg" 
+                      alt="Gardez le cap sur votre métier" 
+                      className="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-accent/30"
+                    />
+                    <div className="text-center">
+                      <p className="text-base font-bold text-primary mb-0.5">Gardez le cap</p>
+                      <p className="text-xs text-muted-foreground">Je m'occupe de l'administratif</p>
+                    </div>
                   </div>
-                  <h3 className="text-base font-semibold text-primary text-center">Accompagnement Projet</h3>
-                  <p className="text-xs text-muted-foreground text-center">
-                    Suivi projets, coordination prestataires.
-                  </p>
-                </CardContent>
-              </Card>
-              <div></div>
+                </div>
+              </div>
+
+              {/* Service cards in grid */}
+              <div className="grid grid-cols-1 gap-4">
+                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
+                  <CardContent className="pt-4 pb-4 space-y-2">
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <Clock className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="text-base font-semibold text-primary text-center">Gestion Administrative</h3>
+                    <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                      Messagerie, agenda, courrier, saisie, classement, rédaction.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
+                  <CardContent className="pt-4 pb-4 space-y-2">
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <TrendingUp className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="text-base font-semibold text-primary text-center">Gestion Financière</h3>
+                    <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                      Devis, factures, suivi paiements, préparation comptable.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
+                  <CardContent className="pt-4 pb-4 space-y-2">
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <Users className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="text-base font-semibold text-primary text-center">Gestion RH</h3>
+                    <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                      Contrats, congés, paie, organismes sociaux.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
+                  <CardContent className="pt-4 pb-4 space-y-2">
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <CheckCircle2 className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="text-base font-semibold text-primary text-center">Organisation</h3>
+                    <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                      Processus, outils, tableaux de bord, efficacité.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
+                  <CardContent className="pt-4 pb-4 space-y-2">
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <FileText className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="text-base font-semibold text-primary text-center">Accompagnement Projet</h3>
+                    <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                      Suivi projets, coordination prestataires.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
+                  <CardContent className="pt-4 pb-4 space-y-2">
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <Mail className="w-5 h-5 text-primary" />
+                    </div>
+                    <h3 className="text-base font-semibold text-primary text-center">Communication</h3>
+                    <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                      Interne, externe, rédaction, coordination.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
@@ -208,124 +314,155 @@ export default function Home() {
       {/* Formules Section */}
       <section id="formules" className="py-20 bg-background">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Mes Formules d'Accompagnement
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Des solutions flexibles adaptées à vos besoins. Tarifs sur devis, forfaits possibles selon le nombre d'heures.
+              Des solutions flexibles adaptées à vos besoins. Tarifs personnalisés selon le nombre d'heures.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="border-2 hover:border-accent transition-all hover:shadow-xl">
-              <CardContent className="p-8">
-                <div className="text-center mb-6">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Accompagnement Ponctuel */}
+            <Card className="border-2 hover:shadow-xl transition-all">
+              <CardContent className="pt-8 pb-8 space-y-6">
+                <div className="text-center">
                   <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-8 h-8 text-accent" />
+                    <Clock className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-2xl font-bold text-primary mb-2">Accompagnement Ponctuel</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Une intervention ciblée pour gérer vos pics d'activité
+                  </p>
                 </div>
-                <p className="text-foreground/80 mb-6">
-                  Une intervention ciblée pour répondre à un besoin spécifique : rattrapage administratif, projet particulier, ou remplacement temporaire.
-                </p>
+                
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Intervention rapide et efficace</span>
+                    <span className="text-sm">Intervention ponctuelle pour répondre à vos besoins temporaires</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Flexibilité selon vos besoins</span>
+                    <span className="text-sm">Gestion de pics d'activité saisonniers</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Sans engagement long terme</span>
+                    <span className="text-sm">Support lors d'absences dans votre équipe</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Flexibilité et réactivité</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Disponibilité en fonction de vos urgences</span>
                   </li>
                 </ul>
-                <div className="mt-8">
-                  <Button className="w-full" variant="outline" asChild>
-                    <a href="#contact">Demander un devis</a>
-                  </Button>
-                </div>
+
+                <Button className="w-full" variant="outline" asChild>
+                  <a href="#contact">Demander un devis</a>
+                </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-accent hover:shadow-2xl transition-all scale-105">
-              <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Clock className="w-8 h-8 text-white" />
+            {/* Accompagnement Quotidien - POPULAIRE */}
+            <Card className="border-4 border-accent hover:shadow-2xl transition-all relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-accent text-accent-foreground px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                  POPULAIRE
+                </span>
+              </div>
+              <CardContent className="pt-10 pb-8 space-y-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-2xl font-bold text-primary mb-2">Accompagnement Quotidien</h3>
-                  <span className="inline-block bg-accent text-white text-xs px-3 py-1 rounded-full">Populaire</span>
+                  <p className="text-sm text-muted-foreground">
+                    Un soutien régulier pour gérer vos tâches administratives au quotidien
+                  </p>
                 </div>
-                <p className="text-foreground/80 mb-6">
-                  Un soutien régulier pour gérer vos tâches administratives et financières au quotidien. Idéal pour libérer du temps et vous concentrer sur votre cœur de métier.
-                </p>
+                
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Suivi régulier et personnalisé</span>
+                    <span className="text-sm">Présence régulière selon vos besoins (quelques heures par semaine ou par mois)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Gestion continue de vos dossiers</span>
+                    <span className="text-sm">Gestion continue de vos tâches administratives et financières</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Disponibilité et réactivité</span>
+                    <span className="text-sm">Suivi personnalisé et proactif</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Disponibilité et réactivité garanties</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Engagement long terme</span>
                   </li>
                 </ul>
-                <div className="mt-8">
-                  <Button className="w-full bg-accent hover:bg-accent/90" asChild>
-                    <a href="#contact">Demander un devis</a>
-                  </Button>
-                </div>
+
+                <Button className="w-full bg-primary hover:bg-primary/90" asChild>
+                  <a href="#contact">Demander un devis</a>
+                </Button>
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:border-accent transition-all hover:shadow-xl">
-              <CardContent className="p-8">
-                <div className="text-center mb-6">
+            {/* Mission 90 Jours */}
+            <Card className="border-2 hover:shadow-xl transition-all">
+              <CardContent className="pt-8 pb-8 space-y-6">
+                <div className="text-center">
                   <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-8 h-8 text-accent" />
+                    <Users className="w-8 h-8 text-primary" />
                   </div>
                   <h3 className="text-2xl font-bold text-primary mb-2">Mission 90 Jours</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Préparation complète de vos dossiers pour transmission à votre expert-comptable
+                  </p>
                 </div>
-                <p className="text-foreground/80 mb-6">
-                  Préparation complète de votre bilan sur 90 jours. Je récupère les pièces manquantes et spécifiques pour transmettre un dossier propre à votre expert-comptable.
-                </p>
+                
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Récupération des pièces manquantes</span>
+                    <span className="text-sm">Récupération et organisation de toutes les pièces manquantes</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Suivi sur 3 mois</span>
+                    <span className="text-sm">Classement et archivage méthodique de vos documents</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Dossier propre pour l'expert-comptable</span>
+                    <span className="text-sm">Saisie et préparation comptable complète</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Transmission d'un dossier propre et complet à votre expert-comptable</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-sm">Délai garanti de 90 jours</span>
                   </li>
                 </ul>
-                <div className="mt-8">
-                  <Button className="w-full" variant="outline" asChild>
-                    <a href="#contact">Demander un devis</a>
-                  </Button>
-                </div>
+
+                <Button className="w-full" variant="outline" asChild>
+                  <a href="#contact">Demander un devis</a>
+                </Button>
               </CardContent>
             </Card>
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-muted-foreground mb-4">
-              <strong>Tarifs sur devis</strong> - Forfaits possibles selon le nombre d'heures nécessaires
+            <p className="text-sm text-muted-foreground italic">
+              Tous nos tarifs, établis selon le nombre d'heures nécessaires
             </p>
-            <Button size="lg" asChild>
+            <Button size="lg" className="mt-6 bg-primary hover:bg-primary/90" asChild>
               <a href="https://calendly.com/nr-solutionsadmin" target="_blank" rel="noopener noreferrer">
-                Réserver un rendez-vous découverte gratuit
+                Réserver un rendez-vous découverte
               </a>
             </Button>
           </div>
@@ -335,44 +472,50 @@ export default function Home() {
       {/* À propos Section */}
       <section id="apropos" className="py-20 bg-accent/10">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <img 
-                src="/profile.jpg" 
-                alt="Roxane - Assistante administrative et financière indépendante, spécialisée en comptabilité TPE" 
-                className="w-full max-w-md mx-auto rounded-lg shadow-2xl"
-              />
-            </div>
-            <div className="order-1 lg:order-2 space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                À propos
-              </h2>
-              <div className="space-y-4 text-lg text-foreground/80">
-                <p>
-                  Je suis Roxane, assistante administrative et financière indépendante. Je mets mon expertise au service des dirigeants de TPE et artisans qui souhaitent se concentrer sur leur cœur de métier.
-                </p>
-                <p>
-                  Forte d'une expérience solide en comptabilité acquise dans le secteur automobile et moto, j'ai ensuite enrichi mon parcours par deux années en cabinet comptable. Durant cette période, j'ai géré les bilans d'un portefeuille d'une trentaine d'entreprises, tous secteurs confondus. Cette diversité m'a permis de développer une compréhension approfondie des enjeux spécifiques à chaque activité et de maîtriser les outils et processus essentiels à une gestion administrative et financière rigoureuse.
-                </p>
-                <p>
-                  Avec une approche personnalisée et professionnelle, je vous accompagne dans la gestion quotidienne de votre activité. Mon objectif est de vous permettre de reprendre le contrôle de votre temps tout en assurant une gestion efficace et sereine de vos tâches administratives et financières.
-                </p>
-                <p>
-                  Que vous ayez besoin d'un accompagnement ponctuel ou régulier, je m'adapte à vos besoins pour vous offrir un service de qualité, dans la confidentialité et la confiance.
-                </p>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-primary">
+                  À propos
+                </h2>
+                <div className="space-y-4 text-foreground/80 leading-relaxed">
+                  <p>
+                    Je suis <strong>Roxane</strong>, assistante administrative et financière indépendante, spécialisée dans l'accompagnement des TPE, PME et artisans du Pays Basque.
+                  </p>
+                  <p>
+                    Forte d'une expérience en comptabilité dans le secteur automobile et motocycle, puis de 2 ans passés en cabinet comptable où j'ai géré une trentaine d'entreprises de tous secteurs, j'ai acquis une expertise approfondie en gestion administrative et financière.
+                  </p>
+                  <p>
+                    Aujourd'hui, je mets mes compétences au service de votre entreprise pour vous libérer des tâches administratives chronophages. Mon objectif : vous permettre de vous concentrer pleinement sur votre cœur de métier pendant que je m'occupe de l'essentiel.
+                  </p>
+                  <p>
+                    Que ce soit en solo ou en renfort de votre équipe existante, j'interviens de manière flexible et personnalisée selon vos besoins.
+                  </p>
+                </div>
+
+                <div className="space-y-3 pt-4">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0" />
+                    <span className="font-semibold">Expérience en comptabilité secteur auto/moto et cabinet comptable</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0" />
+                    <span className="font-semibold">Accompagnement personnalisé et flexible</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-accent flex-shrink-0" />
+                    <span className="font-semibold">Confidentialité et professionnalisme garantis</span>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col gap-3 pt-4">
-                <div className="flex items-center gap-3 text-primary">
-                  <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                  <span>Expérience en comptabilité (secteur auto/moto et cabinet comptable)</span>
-                </div>
-                <div className="flex items-center gap-3 text-primary">
-                  <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                  <span>Accompagnement personnalisé et flexible</span>
-                </div>
-                <div className="flex items-center gap-3 text-primary">
-                  <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                  <span>Confidentialité et professionnalisme garantis</span>
+
+              <div className="relative">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src="/roxane-original.jpg" 
+                    alt="Roxane - Assistante administrative et financière indépendante" 
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
             </div>
@@ -380,208 +523,245 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section - Option B */}
       <section id="contact" className="py-20 bg-background">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                Contactez-moi
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Discutons de vos besoins et de la manière dont je peux vous accompagner
-              </p>
-            </div>
+        <div className="container max-w-5xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Contactez-moi
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Discutons de vos besoins et trouvons ensemble la meilleure solution
+            </p>
+          </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card>
-                <CardContent className="pt-6">
-                  <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Coordonnées et Zone d'intervention */}
+            <div className="space-y-6">
+              {/* Coordonnées */}
+              <Card className="border-2">
+                <CardContent className="pt-6 space-y-4">
+                  <h3 className="text-xl font-bold text-primary mb-4">Mes coordonnées</h3>
+                  
+                  <div className="flex items-start gap-3">
+                    <Mail className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
-                        Nom complet
-                      </label>
-                      <Input
-                        id="name"
-                        type="text"
-                        placeholder="Votre nom"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        required
-                      />
+                      <p className="font-semibold text-sm text-muted-foreground">Email</p>
+                      <a href="mailto:nr.solutionsadm@gmail.com" className="text-primary hover:text-accent transition-colors">
+                        nr.solutionsadm@gmail.com
+                      </a>
                     </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <Phone className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2 text-foreground">
-                        Email
-                      </label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="votre@email.com"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        required
-                      />
+                      <p className="font-semibold text-sm text-muted-foreground">Téléphone / WhatsApp</p>
+                      <a href="tel:+33650974076" className="text-primary hover:text-accent transition-colors">
+                        06 50 97 40 76
+                      </a>
                     </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium mb-2 text-foreground">
-                        Téléphone
-                      </label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        placeholder="06 12 34 56 78"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      />
+                      <p className="font-semibold text-sm text-muted-foreground">Localisation</p>
+                      <p className="text-primary">Arbonne 64210</p>
                     </div>
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium mb-2 text-foreground">
-                        Message
-                      </label>
-                      <Textarea
-                        id="message"
-                        placeholder="Décrivez vos besoins..."
-                        rows={5}
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        required
-                      />
-                    </div>
-                    <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
-                      Envoyer le message
-                    </Button>
-                  </form>
+                  </div>
                 </CardContent>
               </Card>
 
-              <div className="space-y-6">
-                {/* Coordonnées regroupées */}
-                <Card>
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold text-primary mb-4">Coordonnées</h3>
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <Mail className="w-4 h-4 text-primary" />
-                        </div>
-                        <a href="mailto:nr.solutionsadm@gmail.com" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                          nr.solutionsadm@gmail.com
-                        </a>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <Phone className="w-4 h-4 text-primary" />
-                        </div>
-                        <div>
-                          <a href="tel:+33650974076" className="text-muted-foreground hover:text-primary transition-colors text-sm block">
-                            06 50 97 40 76
-                          </a>
-                          <a href="https://wa.me/33650974076" target="_blank" rel="noopener noreferrer" className="text-xs text-accent hover:text-primary transition-colors">
-                            WhatsApp
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Zone d'intervention simplifiée */}
-                <Card>
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <MapPin className="w-4 h-4 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-primary mb-1 text-sm">Zone d'intervention</h3>
-                        <p className="text-muted-foreground text-sm">Biarritz et 25 km alentours</p>
-                        <p className="text-xs text-accent mt-1">Sur site • À distance • Mixte</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Calendly mise en avant */}
-                <Card className="bg-gradient-to-br from-accent/20 to-accent/10 border-2 border-accent">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-3 mb-4">
-                      <div className="w-10 h-10 bg-accent/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-primary mb-1">Réserver un créneau</h3>
-                        <p className="text-sm text-foreground/80">Échangeons sur vos besoins</p>
-                      </div>
-                    </div>
-                    <Button asChild className="w-full bg-primary hover:bg-primary/90">
-                      <a href="https://calendly.com/nr-solutionsadmin" target="_blank" rel="noopener noreferrer">
-                        Prendre rendez-vous
-                      </a>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
+              {/* Zone d'intervention */}
+              <Card className="border-2">
+                <CardContent className="pt-6">
+                  <h3 className="text-xl font-bold text-primary mb-3">Zone d'intervention</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    <strong>Biarritz et alentours</strong> (rayon de 25 km)
+                  </p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Anglet, Bayonne, Bidart, Guéthary, Saint-Jean-de-Luz, Ciboure, Hendaye, Urrugne, Ascain, Espelette, Cambo-les-Bains, Hasparren, Ustaritz, Arcangues, Ahetze, Saint-Pée-sur-Nivelle, et plus encore.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
+
+            {/* Calendly Card mise en avant */}
+            <Card className="border-4 border-accent bg-gradient-to-br from-accent/5 to-accent/10 shadow-xl">
+              <CardContent className="pt-8 pb-8 space-y-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Clock className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-2">Réserver un créneau</h3>
+                  <p className="text-muted-foreground">
+                    Planifiez un rendez-vous découverte gratuit pour discuter de vos besoins
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
+                    <span className="text-sm">Échange de 30 minutes</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
+                    <span className="text-sm">Sans engagement</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
+                    <span className="text-sm">Analyse de vos besoins</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
+                    <span className="text-sm">Devis personnalisé</span>
+                  </div>
+                </div>
+
+                <Button size="lg" className="w-full bg-primary hover:bg-primary/90 shadow-lg" asChild>
+                  <a href="https://calendly.com/nr-solutionsadmin" target="_blank" rel="noopener noreferrer">
+                    Prendre rendez-vous
+                  </a>
+                </Button>
+
+                <p className="text-xs text-center text-muted-foreground italic">
+                  Vous préférez m'écrire ? Utilisez le formulaire ci-dessous
+                </p>
+              </CardContent>
+            </Card>
           </div>
+
+          {/* Formulaire de contact en pleine largeur */}
+          <Card className="border-2 mt-8">
+            <CardContent className="pt-8 pb-8">
+              <h3 className="text-xl font-bold text-primary mb-6 text-center">Ou envoyez-moi un message</h3>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-semibold text-foreground">
+                      Nom complet *
+                    </label>
+                    <Input
+                      id="name"
+                      placeholder="Votre nom"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-semibold text-foreground">
+                      Email *
+                    </label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="votre@email.com"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="phone" className="text-sm font-semibold text-foreground">
+                    Téléphone
+                  </label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    placeholder="06 12 34 56 78"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-sm font-semibold text-foreground">
+                    Message *
+                  </label>
+                  <Textarea
+                    id="message"
+                    placeholder="Décrivez vos besoins..."
+                    rows={6}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    required
+                  />
+                </div>
+                <Button type="submit" size="lg" className="w-full md:w-auto bg-primary hover:bg-primary/90">
+                  Envoyer le message
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-8">
+      <footer className="bg-primary text-primary-foreground py-12">
         <div className="container">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="font-bold text-xl mb-3">NR Solutions Admin</h3>
-              <p className="text-primary-foreground/80 mb-4">
-                Votre bras droit administratif et financier pour développer votre activité en toute sérénité.
+              <h3 className="text-xl font-bold mb-4">NR Solutions Admin</h3>
+              <p className="text-sm text-primary-foreground/80">
+                Votre bras droit administratif et financier au Pays Basque
               </p>
-              <div className="flex gap-4">
-                <a href="https://www.linkedin.com/in/roxane-nos/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-                </a>
-                <a href="https://www.instagram.com/nrsolutionsadmin/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-accent transition-colors">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/>
-                  </svg>
-                </a>
-              </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-3">Navigation</h4>
-              <div className="flex flex-col gap-2">
-                <a href="#accueil" className="text-primary-foreground/80 hover:text-accent transition-colors">Accueil</a>
-                <a href="#services" className="text-primary-foreground/80 hover:text-accent transition-colors">Services</a>
-                <a href="#formules" className="text-primary-foreground/80 hover:text-accent transition-colors">Formules</a>
-                <a href="#apropos" className="text-primary-foreground/80 hover:text-accent transition-colors">À propos</a>
-                <a href="#contact" className="text-primary-foreground/80 hover:text-accent transition-colors">Contact</a>
-              </div>
+              <h4 className="font-semibold mb-4">Navigation</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="#accueil" className="hover:text-accent transition-colors">Accueil</a></li>
+                <li><a href="#services" className="hover:text-accent transition-colors">Services</a></li>
+                <li><a href="#formules" className="hover:text-accent transition-colors">Formules</a></li>
+                <li><a href="#apropos" className="hover:text-accent transition-colors">À propos</a></li>
+                <li><a href="#contact" className="hover:text-accent transition-colors">Contact</a></li>
+              </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3">Contact</h4>
-              <div className="flex flex-col gap-2 text-primary-foreground/80">
-                <a href="mailto:nr.solutionsadm@gmail.com" className="hover:text-accent transition-colors">nr.solutionsadm@gmail.com</a>
-                <a href="tel:+33650974076" className="hover:text-accent transition-colors">06 50 97 40 76</a>
-                <a href="https://wa.me/33650974076" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
-                <p>Arbonne 64210</p>
-              </div>
+              <h4 className="font-semibold mb-4">Contact</h4>
+              <ul className="space-y-2 text-sm text-primary-foreground/80">
+                <li>
+                  <a href="mailto:nr.solutionsadm@gmail.com" className="hover:text-accent transition-colors">
+                    nr.solutionsadm@gmail.com
+                  </a>
+                </li>
+                <li>Arbonne 64210</li>
+                <li className="pt-3">
+                  <strong className="text-primary-foreground">Zone d'intervention :</strong><br />
+                  Biarritz, Anglet, Bayonne, Bidart, Guéthary, Saint-Jean-de-Luz, Ciboure, Hendaye, Urrugne, Ascain, Espelette, Cambo-les-Bains, Hasparren, Ustaritz, Arcangues, Ahetze, Saint-Pée-sur-Nivelle
+                </li>
+              </ul>
             </div>
           </div>
-          <div className="border-t border-primary-foreground/20 mt-8 pt-6 text-center text-primary-foreground/60">
-            <div className="mb-4 text-sm">
-              <p className="mb-1"><strong>Zones d'intervention :</strong></p>
-              <p className="text-xs leading-relaxed max-w-4xl mx-auto">
-                Arbonne, Biarritz, Bidart, Anglet, Bayonne, Guéthary, Ahetze, Arcangues, Bassussarry, Ascain, Ciboure, Saint-Jean-de-Luz, Urrugne, Tarnos, Boucau, Côte Basque, Pays Basque et Sud Landes
-              </p>
-            </div>
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4">
-              <p>&copy; {new Date().getFullYear()} NR Solutions Admin. Tous droits réservés.</p>
-              <span className="hidden md:inline">•</span>
-              <a href="/cgvps.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+
+          <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-primary-foreground/60">
+              © 2025 NR Solutions Admin. Tous droits réservés.
+            </p>
+            <div className="flex gap-6 items-center">
+              <a 
+                href="https://www.linkedin.com/in/roxane-nos/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+              >
+                LinkedIn
+              </a>
+              <a 
+                href="https://www.instagram.com/nrsolutionsadmin/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+              >
+                Instagram
+              </a>
+              <a 
+                href="/cgvps.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-foreground/80 hover:text-accent transition-colors text-sm"
+              >
                 Conditions Générales
               </a>
             </div>
