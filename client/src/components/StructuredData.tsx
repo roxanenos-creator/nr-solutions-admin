@@ -7,7 +7,7 @@ export function StructuredData() {
       "@type": "ProfessionalService",
       "name": "NR Solutions Admin",
       "image": "https://nr-solutions-admin.fr/logo-gold.png",
-      "description": "Assistante administrative et financière indépendante à Biarritz. Accompagnement des TPE et artisans du Pays Basque et Sud Landes en gestion administrative, comptabilité et RH.",
+      "description": "Assistante administrative et financière indépendante (secrétaire freelance) à Biarritz. Accompagnement des TPE et artisans du Pays Basque et Sud Landes en gestion administrative, comptabilité et RH.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Arbonne",
@@ -49,7 +49,7 @@ export function StructuredData() {
       "founder": {
         "@type": "Person",
         "name": "Roxane",
-        "jobTitle": "Assistante Administrative et Financière",
+        "jobTitle": "Assistante Administrative et Financière Indépendante",
         "description": "Expérience en comptabilité dans le secteur automobile et moto, et 2 ans en cabinet comptable avec gestion de 30 entreprises tous secteurs."
       },
       "serviceType": [

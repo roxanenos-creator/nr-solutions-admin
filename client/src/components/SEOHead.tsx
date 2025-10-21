@@ -8,9 +8,9 @@ interface SEOHeadProps {
 }
 
 export function SEOHead({
-  title = "NR Solutions Admin - Assistante Administrative et Financière à Biarritz",
-  description = "Roxane, assistante administrative et financière indépendante à Biarritz. Accompagnement des TPE et artisans du Pays Basque et Sud Landes. Gestion administrative, comptabilité, RH.",
-  keywords = "assistante administrative Biarritz, gestion financière Pays Basque, comptabilité TPE, assistante indépendante Arbonne, gestion administrative Sud Landes, aide administrative artisans, secrétariat externalisé Biarritz",
+  title = "NR Solutions Admin - Assistante Administrative et Financière Indépendante à Biarritz",
+  description = "Roxane, assistante administrative et financière indépendante freelance à Biarritz. Accompagnement des TPE et artisans du Pays Basque et Sud Landes. Gestion administrative, comptabilité, RH.",
+  keywords = "assistante administrative indépendante Biarritz, secrétaire indépendante Biarritz, secrétaire freelance Pays Basque, assistante freelance Pays Basque, gestion financière indépendante, comptabilité TPE Biarritz, secrétaire à domicile Arbonne, assistante indépendante Arbonne, gestion administrative Sud Landes, aide administrative artisans, secrétariat externalisé Biarritz, freelance administratif Pays Basque, secrétaire auto-entrepreneur",
   ogImage = "/banner.png"
 }: SEOHeadProps) {
   useEffect(() => {
