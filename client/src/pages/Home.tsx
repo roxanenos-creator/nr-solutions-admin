@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, CheckCircle2, Clock, TrendingUp, Users } from "lucide-react";
 import { useState } from "react";
+import { SEOHead } from "@/components/SEOHead";
+import { StructuredData } from "@/components/StructuredData";
 
 export default function Home() {
   const [formData, setFormData] = useState({
@@ -22,12 +24,14 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      <SEOHead />
+      <StructuredData />
       {/* Navigation */}
       <nav className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-md">
         <div className="container py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img src="/logo-gold.png" alt="NR Solutions Admin" className="h-12 w-auto" />
+              <img src="/logo-gold.png" alt="NR Solutions Admin - Assistante administrative et financière Biarritz" className="h-12 w-auto" />
               <div className="text-2xl font-bold tracking-tight bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">NR Solutions Admin</div>
             </div>
             <div className="hidden md:flex gap-6 items-center">
@@ -63,7 +67,7 @@ export default function Home() {
             <div className="relative">
               <img 
                 src="/banner.png" 
-                alt="Bannière NR Solutions Admin" 
+                alt="Roxane - Assistante administrative et financière indépendante à Biarritz, Pays Basque" 
                 className="w-full rounded-lg shadow-2xl"
               />
             </div>
@@ -84,7 +88,7 @@ export default function Home() {
             <div className="max-w-2xl mx-auto mb-12">
               <img 
                 src="/workspace.jpg" 
-                alt="Espace de travail professionnel" 
+                alt="Gestion administrative et financière pour TPE et artisans - NR Solutions Admin" 
                 className="w-full rounded-lg shadow-xl"
               />
             </div>
@@ -173,7 +177,7 @@ export default function Home() {
             <div className="order-2 lg:order-1">
               <img 
                 src="/profile.jpg" 
-                alt="Photo professionnelle" 
+                alt="Roxane - Assistante administrative et financière indépendante, spécialisée en comptabilité TPE" 
                 className="w-full max-w-md mx-auto rounded-lg shadow-2xl"
               />
             </div>
