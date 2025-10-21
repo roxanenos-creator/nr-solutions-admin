@@ -111,7 +111,27 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Compass Center with Services Around */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Central Compass */}
+            <div className="flex justify-center items-center mb-16">
+              <div className="bg-accent/10 p-8 rounded-2xl border-4 border-accent/40 shadow-2xl max-w-md">
+                <div className="flex flex-col items-center gap-6">
+                  <img 
+                    src="/compass.jpg" 
+                    alt="Gardez le cap sur votre métier" 
+                    className="w-48 h-48 rounded-full object-cover shadow-lg border-4 border-accent/30"
+                  />
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-primary mb-2">Gardez le cap sur votre métier</p>
+                    <p className="text-base text-muted-foreground">Je m'occupe de votre administratif,<br/>vous restez concentré sur votre expertise</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Services in Grid Around */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
               <CardContent className="pt-6 space-y-4">
                 <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
@@ -190,6 +210,7 @@ export default function Home() {
                 </p>
               </CardContent>
             </Card>
+          </div>
           </div>
         </div>
       </section>
