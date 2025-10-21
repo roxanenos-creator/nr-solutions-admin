@@ -102,7 +102,7 @@ export default function Home() {
             <p className="text-base text-muted-foreground max-w-2xl mx-auto mb-8">
               <strong>En solo ou en renfort :</strong> j'interviens de manière autonome ou en complément de votre équipe administrative et comptable existante pour renforcer vos services.
             </p>
-            <div className="max-w-xl mx-auto mb-12">
+            <div className="max-w-lg mx-auto mb-12">
               <img 
                 src="/workspace.jpg" 
                 alt="Gestion administrative et financière pour TPE et artisans - NR Solutions Admin" 
