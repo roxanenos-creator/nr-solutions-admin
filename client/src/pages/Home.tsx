@@ -260,12 +260,12 @@ export default function Home() {
                   <h3 className="text-2xl font-bold text-primary mb-2">Mission 90 Jours</h3>
                 </div>
                 <p className="text-foreground/80 mb-6">
-                  Préparation complète de votre bilan sur 90 jours. Un accompagnement structuré pour une gestion financière optimale et une clôture sereine.
+                  Préparation complète de votre bilan sur 90 jours. Je récupère les pièces manquantes et spécifiques pour transmettre un dossier propre à votre expert-comptable.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Préparation bilan comptable</span>
+                    <span className="text-sm">Récupération des pièces manquantes</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
@@ -273,7 +273,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Optimisation financière</span>
+                    <span className="text-sm">Dossier propre pour l'expert-comptable</span>
                   </li>
                 </ul>
                 <div className="mt-8">
