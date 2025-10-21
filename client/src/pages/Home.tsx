@@ -65,25 +65,12 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="relative space-y-6">
+            <div className="relative">
               <img 
                 src="/banner.png" 
                 alt="Roxane - Assistante administrative et financière indépendante à Biarritz, Pays Basque" 
                 className="w-full rounded-lg shadow-2xl"
               />
-              <div className="bg-accent/10 p-6 rounded-lg border-2 border-accent/30">
-                <div className="flex items-center gap-4">
-                  <img 
-                    src="/compass.jpg" 
-                    alt="Gardez le cap sur votre métier" 
-                    className="w-24 h-24 rounded-lg object-cover shadow-md"
-                  />
-                  <div>
-                    <p className="text-lg font-semibold text-primary mb-1">Gardez le cap sur votre métier</p>
-                    <p className="text-sm text-muted-foreground">Je m'occupe de votre administratif, vous restez concentré sur votre expertise</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
