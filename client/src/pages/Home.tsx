@@ -184,13 +184,14 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <Card className="border-2 hover:border-accent transition-all hover:shadow-xl">
+            <Card className="border-2 border-accent hover:shadow-2xl transition-all scale-105">
               <CardContent className="p-8">
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Clock className="w-8 h-8 text-accent" />
+                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Clock className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-primary mb-2">Accompagnement Quotidien</h3>
+                  <span className="inline-block bg-accent text-white text-xs px-3 py-1 rounded-full">Populaire</span>
                 </div>
                 <p className="text-foreground/80 mb-6">
                   Un soutien régulier pour gérer vos tâches administratives et financières au quotidien. Idéal pour libérer du temps et vous concentrer sur votre cœur de métier.
@@ -210,21 +211,20 @@ export default function Home() {
                   </li>
                 </ul>
                 <div className="mt-8">
-                  <Button className="w-full" variant="outline" asChild>
+                  <Button className="w-full bg-accent hover:bg-accent/90" asChild>
                     <a href="#contact">Demander un devis</a>
                   </Button>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="border-2 border-accent hover:shadow-2xl transition-all scale-105">
+            <Card className="border-2 hover:border-accent transition-all hover:shadow-xl">
               <CardContent className="p-8">
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-8 h-8 text-accent" />
                   </div>
                   <h3 className="text-2xl font-bold text-primary mb-2">Accompagnement Ponctuel</h3>
-                  <span className="inline-block bg-accent text-white text-xs px-3 py-1 rounded-full">Populaire</span>
                 </div>
                 <p className="text-foreground/80 mb-6">
                   Une intervention ciblée pour répondre à un besoin spécifique : rattrapage administratif, projet particulier, ou remplacement temporaire.
@@ -244,7 +244,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <div className="mt-8">
-                  <Button className="w-full bg-accent hover:bg-accent/90" asChild>
+                  <Button className="w-full" variant="outline" asChild>
                     <a href="#contact">Demander un devis</a>
                   </Button>
                 </div>
