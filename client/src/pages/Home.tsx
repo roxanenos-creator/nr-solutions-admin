@@ -379,7 +379,8 @@ export default function Home() {
               <div className="flex flex-col gap-2 text-primary-foreground/80">
                 <a href="mailto:nr.solutionsadm@gmail.com" className="hover:text-accent transition-colors">nr.solutionsadm@gmail.com</a>
                 <a href="tel:+33650974076" className="hover:text-accent transition-colors">06 50 97 40 76</a>
-                <a href="https://wa.me/33650974076" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp : 06 50 97 40 76</a>
+                <a href="https://wa.me/33650974076" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp</a>
+                <p>Arbonne 64210</p>
               </div>
             </div>
           </div>
