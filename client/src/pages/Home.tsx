@@ -48,8 +48,8 @@ export default function Home() {
       {/* Hero Section avec photo badge */}
       <section id="accueil" className="relative bg-gradient-to-br from-accent/20 to-background py-20">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <div className="space-y-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
                 Bras droit administratif et financier à Arbonne - Biarritz
               </h1>
@@ -57,7 +57,7 @@ export default function Home() {
                 Services administratifs externalisés pour TPE, PME et artisans du Pays Basque. Gagnez du temps, je m'occupe de votre gestion administrative et financière.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
+                <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-lg" asChild>
                   <a href="#contact">Devis gratuit</a>
                 </Button>
                 <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary/10" asChild>
@@ -67,19 +67,19 @@ export default function Home() {
             </div>
             
             {/* Photo badge et workspace à droite */}
-            <div className="relative flex flex-col items-center gap-6">
+            <div className="relative flex flex-col items-center gap-8">
               <div className="relative">
                 <img 
                   src="/roxane-badge-bw.jpg" 
                   alt="Roxane - Bras droit administratif et financier à Biarritz, Pays Basque" 
-                  className="w-48 h-48 rounded-full object-cover object-center border-4 border-accent shadow-2xl"
+                  className="w-56 h-56 rounded-full object-cover object-top border-[6px] border-accent shadow-2xl"
                 />
               </div>
-              <div className="w-full max-w-md">
+              <div className="w-full max-w-sm">
                 <img 
                   src="/workspace.jpg" 
                   alt="Gestion administrative professionnelle" 
-                  className="w-full rounded-lg shadow-lg"
+                  className="w-full rounded-lg shadow-xl"
                 />
               </div>
             </div>
