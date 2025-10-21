@@ -27,6 +27,7 @@ export default function Home() {
         <div className="container py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
+              <img src="/logo.png" alt="NR Solutions Admin" className="h-12 w-auto" />
               <div className="text-2xl font-bold tracking-tight">NR Solutions Admin</div>
             </div>
             <div className="hidden md:flex gap-6 items-center">
@@ -163,11 +164,18 @@ export default function Home() {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <img 
-                src="/profile.jpg" 
-                alt="Photo professionnelle" 
-                className="w-full max-w-md mx-auto rounded-lg shadow-2xl"
-              />
+              <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
+                <img 
+                  src="/photo1.jpg" 
+                  alt="Photo professionnelle 1" 
+                  className="w-full rounded-lg shadow-lg"
+                />
+                <img 
+                  src="/photo2.jpg" 
+                  alt="Photo professionnelle 2" 
+                  className="w-full rounded-lg shadow-lg"
+                />
+              </div>
             </div>
             <div className="order-1 lg:order-2 space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-primary">
@@ -287,7 +295,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-primary mb-1">Email</h3>
-                        <p className="text-muted-foreground">contact@nrsolutions-admin.fr</p>
+                        <a href="mailto:nr.solutionsadm@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">nr.solutionsadm@gmail.com</a>
                       </div>
                     </div>
                   </CardContent>
@@ -300,8 +308,11 @@ export default function Home() {
                         <Phone className="w-5 h-5 text-primary" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-primary mb-1">Téléphone</h3>
-                        <p className="text-muted-foreground">+33 6 XX XX XX XX</p>
+                        <h3 className="font-semibold text-primary mb-1">Téléphone / WhatsApp</h3>
+                        <a href="tel:+33650974076" className="text-muted-foreground hover:text-primary transition-colors block mb-1">06 50 97 40 76</a>
+                        <a href="https://wa.me/33650974076" target="_blank" rel="noopener noreferrer" className="text-sm text-accent hover:text-primary transition-colors inline-flex items-center gap-1">
+                          <span>Contacter sur WhatsApp</span>
+                        </a>
                       </div>
                     </div>
                   </CardContent>
@@ -357,8 +368,9 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-3">Contact</h4>
               <div className="flex flex-col gap-2 text-primary-foreground/80">
-                <p>contact@nrsolutions-admin.fr</p>
-                <p>+33 6 XX XX XX XX</p>
+                <a href="mailto:nr.solutionsadm@gmail.com" className="hover:text-accent transition-colors">nr.solutionsadm@gmail.com</a>
+                <a href="tel:+33650974076" className="hover:text-accent transition-colors">06 50 97 40 76</a>
+                <a href="https://wa.me/33650974076" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp : 06 50 97 40 76</a>
               </div>
             </div>
           </div>
