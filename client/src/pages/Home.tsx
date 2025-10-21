@@ -28,7 +28,7 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <img src="/logo.png" alt="NR Solutions Admin" className="h-12 w-auto" />
-              <div className="text-2xl font-bold tracking-tight">NR Solutions Admin</div>
+              <div className="text-2xl font-bold tracking-tight bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">NR Solutions Admin</div>
             </div>
             <div className="hidden md:flex gap-6 items-center">
               <a href="#accueil" className="hover:text-accent transition-colors">Accueil</a>
@@ -319,7 +319,8 @@ export default function Home() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-primary mb-1">Zone d'intervention</h3>
-                        <p className="text-muted-foreground">France entière (télétravail et déplacements possibles)</p>
+                        <p className="text-muted-foreground">Biarritz et 25 km alentours (Pays Basque et Sud Landes)</p>
+                        <p className="text-sm text-muted-foreground mt-1">Sur site, à distance ou formule mixte selon vos besoins</p>
                       </div>
                     </div>
                   </CardContent>
@@ -328,9 +329,14 @@ export default function Home() {
                 <Card className="bg-accent/10 border-accent">
                   <CardContent className="pt-6">
                     <h3 className="font-semibold text-primary mb-3">Disponibilité</h3>
-                    <p className="text-foreground/80">
+                    <p className="text-foreground/80 mb-4">
                       Je suis disponible pour échanger sur vos besoins et vous proposer un accompagnement adapté à votre activité.
                     </p>
+                    <Button asChild className="w-full bg-primary hover:bg-primary/90">
+                      <a href="https://calendly.com/nr-solutionsadmin" target="_blank" rel="noopener noreferrer">
+                        Réserver un créneau
+                      </a>
+                    </Button>
                   </CardContent>
                 </Card>
               </div>
