@@ -186,7 +186,10 @@ export default function Home() {
                   Assistante administrative et financière indépendante, je mets mon expertise au service des dirigeants de TPE et artisans qui souhaitent se concentrer sur leur cœur de métier.
                 </p>
                 <p>
-                  Avec une approche personnalisée et professionnelle, je vous accompagne dans la gestion quotidienne de votre activité. Mon objectif est de vous permettre de reprendre le contrôle de votre temps tout en assurant une gestion rigoureuse et efficace de vos tâches administratives et financières.
+                  Forte d'une expérience solide en comptabilité acquise dans le secteur automobile et moto, j'ai ensuite enrichi mon parcours par deux années en cabinet comptable. Durant cette période, j'ai géré les bilans d'un portefeuille d'une trentaine d'entreprises, tous secteurs confondus. Cette diversité m'a permis de développer une compréhension approfondie des enjeux spécifiques à chaque activité et de maîtriser les outils et processus essentiels à une gestion administrative et financière rigoureuse.
+                </p>
+                <p>
+                  Avec une approche personnalisée et professionnelle, je vous accompagne dans la gestion quotidienne de votre activité. Mon objectif est de vous permettre de reprendre le contrôle de votre temps tout en assurant une gestion efficace et sereine de vos tâches administratives et financières.
                 </p>
                 <p>
                   Que vous ayez besoin d'un accompagnement ponctuel ou régulier, je m'adapte à vos besoins pour vous offrir un service de qualité, dans la confidentialité et la confiance.
@@ -195,7 +198,7 @@ export default function Home() {
               <div className="flex flex-col gap-3 pt-4">
                 <div className="flex items-center gap-3 text-primary">
                   <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                  <span>Expérience en gestion administrative et financière</span>
+                  <span>Expérience en comptabilité (secteur auto/moto et cabinet comptable)</span>
                 </div>
                 <div className="flex items-center gap-3 text-primary">
                   <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
