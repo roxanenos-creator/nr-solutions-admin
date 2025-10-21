@@ -27,7 +27,7 @@ export default function Home() {
         <div className="container py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img src="/logo.png" alt="NR Solutions Admin" className="h-12 w-auto" />
+              <img src="/logo-nav.png" alt="NR Solutions Admin" className="h-12 w-auto" />
               <div className="text-2xl font-bold tracking-tight bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">NR Solutions Admin</div>
             </div>
             <div className="hidden md:flex gap-6 items-center">
