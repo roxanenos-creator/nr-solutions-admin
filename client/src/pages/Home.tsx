@@ -51,10 +51,10 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
-                Bras droit administratif et financier des dirigeants de TPE et artisans
+                Assistante Administrative Indépendante à Arbonne - Biarritz
               </h1>
               <p className="text-xl text-foreground/80 leading-relaxed">
-                Je vous aide à reprendre le contrôle de votre temps, structurer votre activité et faire grandir votre business en toute sérénité.
+                Services administratifs externalisés pour TPE, PME et artisans du Pays Basque. Gagnez du temps, je m'occupe de votre gestion administrative et financière.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
@@ -81,10 +81,10 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Mes Services
+              Services Administratifs Externalisés
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Un accompagnement sur mesure pour libérer votre temps et optimiser votre gestion administrative et financière
+              Gestion administrative externalisée, télésecrétariat professionnel et soutien administratif à distance pour TPE, PME et artisans du Pays Basque
             </p>
             <div className="max-w-2xl mx-auto mb-12">
               <img 
@@ -103,7 +103,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold text-primary">Gestion Administrative</h3>
                 <p className="text-muted-foreground">
-                  Traitement du courrier, gestion des emails, organisation de l'agenda, préparation de documents et suivi administratif quotidien.
+                  Gestion de la messagerie professionnelle, organisation d'agenda et rendez-vous, traitement du courrier, saisie de données, classement et archivage de documents, rédaction administrative.
                 </p>
               </CardContent>
             </Card>
@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold text-primary">Gestion Financière</h3>
                 <p className="text-muted-foreground">
-                  Suivi de trésorerie, facturation clients, gestion des fournisseurs, rapprochements bancaires et tableaux de bord financiers.
+                  Création de devis et factures, suivi des paiements, relance des impayés, préparation comptable, gestion de la facturation et tableaux de bord financiers.
                 </p>
               </CardContent>
             </Card>
@@ -461,8 +461,11 @@ export default function Home() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-primary mb-1">Zone d'intervention</h3>
-                        <p className="text-muted-foreground">Biarritz et 25 km alentours (Pays Basque et Sud Landes)</p>
-                        <p className="text-sm text-muted-foreground mt-1">Sur site, à distance ou formule mixte selon vos besoins</p>
+                        <p className="text-muted-foreground mb-2">Arbonne, Biarritz et 25 km alentours</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          Arbonne, Biarritz, Bidart, Anglet, Bayonne, Guéthary, Ahetze, Arcangues, Bassussarry, Ascain, Ciboure, Saint-Jean-de-Luz, Urrugne, Tarnos, Boucau, Côte Basque, Pays Basque et Sud Landes.
+                        </p>
+                        <p className="text-sm text-accent mt-2 font-medium">Sur site, à distance ou formule mixte selon vos besoins</p>
                       </div>
                     </div>
                   </CardContent>
@@ -530,7 +533,13 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-primary-foreground/20 mt-8 pt-6 text-center text-primary-foreground/60">
-            <div className="flex flex-col md:flex-row justify-center items-center gap-4 mb-2">
+            <div className="mb-4 text-sm">
+              <p className="mb-1"><strong>Zones d'intervention :</strong></p>
+              <p className="text-xs leading-relaxed max-w-4xl mx-auto">
+                Arbonne, Biarritz, Bidart, Anglet, Bayonne, Guéthary, Ahetze, Arcangues, Bassussarry, Ascain, Ciboure, Saint-Jean-de-Luz, Urrugne, Tarnos, Boucau, Côte Basque, Pays Basque et Sud Landes
+              </p>
+            </div>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-4">
               <p>&copy; {new Date().getFullYear()} NR Solutions Admin. Tous droits réservés.</p>
               <span className="hidden md:inline">•</span>
               <a href="/cgvps.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
