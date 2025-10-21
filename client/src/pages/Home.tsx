@@ -65,12 +65,25 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative space-y-6">
               <img 
                 src="/banner.png" 
                 alt="Roxane - Assistante administrative et financière indépendante à Biarritz, Pays Basque" 
                 className="w-full rounded-lg shadow-2xl"
               />
+              <div className="bg-accent/10 p-6 rounded-lg border-2 border-accent/30">
+                <div className="flex items-center gap-4">
+                  <img 
+                    src="/compass.jpg" 
+                    alt="Gardez le cap sur votre métier" 
+                    className="w-24 h-24 rounded-lg object-cover shadow-md"
+                  />
+                  <div>
+                    <p className="text-lg font-semibold text-primary mb-1">Gardez le cap sur votre métier</p>
+                    <p className="text-sm text-muted-foreground">Je m'occupe de votre administratif, vous restez concentré sur votre expertise</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -89,7 +102,7 @@ export default function Home() {
             <p className="text-base text-muted-foreground max-w-2xl mx-auto mb-8">
               <strong>En solo ou en renfort :</strong> j'interviens de manière autonome ou en complément de votre équipe administrative et comptable existante pour renforcer vos services.
             </p>
-            <div className="max-w-2xl mx-auto mb-12">
+            <div className="max-w-xl mx-auto mb-12">
               <img 
                 src="/workspace.jpg" 
                 alt="Gestion administrative et financière pour TPE et artisans - NR Solutions Admin" 
@@ -111,7 +124,14 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
+            <Card className="border-2 hover:border-accent transition-all hover:shadow-lg overflow-hidden">
+              <div className="relative h-48">
+                <img 
+                  src="/financial-analysis.jpg" 
+                  alt="Analyse financière et tableaux de bord" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <CardContent className="pt-6 space-y-4">
                 <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-primary" />
