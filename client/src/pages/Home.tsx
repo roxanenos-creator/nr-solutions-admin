@@ -64,24 +64,15 @@ export default function Home() {
                   <a href="https://calendly.com/nr-solutionsadmin" target="_blank" rel="noopener noreferrer">Rendez-vous découverte</a>
                 </Button>
               </div>
-              
-              {/* Bannière LinkedIn sous les boutons */}
-              <div className="mt-8">
-                <img 
-                  src="/banner.png" 
-                  alt="Bras droit administratif et financier des dirigeants de TPE et artisans" 
-                  className="w-full max-w-lg rounded-lg shadow-lg"
-                />
-              </div>
             </div>
             
             {/* Photo badge et workspace à droite */}
             <div className="relative flex flex-col items-center gap-6">
               <div className="relative">
                 <img 
-                  src="/roxane-badge.png" 
-                  alt="Roxane - Assistante administrative et financière indépendante à Biarritz" 
-                  className="w-48 h-48 rounded-full object-cover border-4 border-accent shadow-2xl"
+                  src="/roxane-badge-bw.jpg" 
+                  alt="Roxane - Bras droit administratif et financier à Biarritz, Pays Basque" 
+                  className="w-48 h-48 rounded-full object-cover object-center border-4 border-accent shadow-2xl"
                 />
               </div>
               <div className="w-full max-w-md">
