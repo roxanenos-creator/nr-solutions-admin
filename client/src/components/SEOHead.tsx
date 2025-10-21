@@ -9,8 +9,8 @@ interface SEOHeadProps {
 
 export function SEOHead({
   title = "Assistante Administrative Indépendante à Arbonne – Services Externalisés pour Biarritz, Bayonne & Côte Basque",
-  description = "Gagnez du temps avec une assistante administrative indépendante basée à Arbonne, près de Biarritz. Services administratifs externalisés pour PME, artisans et indépendants dans tout le Pays Basque.",
-  keywords = "assistante administrative indépendante Arbonne, assistante freelance Biarritz, services administratifs Bayonne, gestion administrative Côte Basque, aide administrative Pays Basque, secrétariat indépendant Anglet, assistante PME, assistante artisan, externalisation administrative, assistante administrative Bidart, assistante administrative Guéthary, assistante administrative Saint-Jean-de-Luz, gestion administrative externalisée, télésecrétariat professionnel Biarritz",
+  description = "Assistante administrative indépendante à Arbonne, Biarritz et Pays Basque. Services administratifs externalisés, renfort d'équipe et support comptable pour TPE, PME et artisans. Intervention en solo ou en complément de votre équipe existante.",
+  keywords = "assistante administrative indépendante Arbonne, assistante freelance Biarritz, renfort administratif, support équipe comptable, complément service administratif, renfort équipe existante, services administratifs Bayonne, gestion administrative Côte Basque, aide administrative Pays Basque, secrétariat indépendant Anglet, assistante PME, assistante artisan, externalisation administrative, assistante administrative Bidart, assistante administrative Guéthary, assistante administrative Saint-Jean-de-Luz, gestion administrative externalisée, télésecrétariat professionnel Biarritz",
   ogImage = "/banner.png"
 }: SEOHeadProps) {
   useEffect(() => {

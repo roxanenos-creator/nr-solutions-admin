@@ -83,8 +83,11 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Services Administratifs Externalisés
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
               Gestion administrative externalisée, télésecrétariat professionnel et soutien administratif à distance pour TPE, PME et artisans du Pays Basque
+            </p>
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto mb-8">
+              <strong>En solo ou en renfort :</strong> j'interviens de manière autonome ou en complément de votre équipe administrative et comptable existante pour renforcer vos services.
             </p>
             <div className="max-w-2xl mx-auto mb-12">
               <img 

@@ -7,7 +7,7 @@ export function StructuredData() {
       "@type": "ProfessionalService",
       "name": "NR Solutions Admin",
       "image": "https://nr-solutions-admin.fr/logo-gold.png",
-      "description": "Assistante administrative et financière indépendante (secrétaire freelance) à Biarritz. Accompagnement des TPE et artisans du Pays Basque et Sud Landes en gestion administrative, comptabilité et RH.",
+      "description": "Assistante administrative et financière indépendante (secrétaire freelance) à Biarritz. Renfort administratif et support d'équipe comptable. Accompagnement des TPE et artisans du Pays Basque en gestion administrative, comptabilité et RH. Intervention en solo ou en complément d'équipe existante.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Arbonne",
@@ -58,7 +58,9 @@ export function StructuredData() {
         "Comptabilité",
         "Gestion RH",
         "Communication",
-        "Organisation"
+        "Organisation",
+        "Renfort Administratif",
+        "Support Équipe Comptable"
       ],
       "knowsAbout": [
         "Comptabilité TPE",
