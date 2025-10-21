@@ -45,13 +45,13 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section avec bannière */}
+      {/* Hero Section avec photo badge */}
       <section id="accueil" className="relative bg-gradient-to-br from-accent/20 to-background py-20">
         <div className="container">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
-                Assistante Administrative Indépendante à Arbonne - Biarritz
+                Bras droit administratif et financier à Arbonne - Biarritz
               </h1>
               <p className="text-xl text-foreground/80 leading-relaxed">
                 Services administratifs externalisés pour TPE, PME et artisans du Pays Basque. Gagnez du temps, je m'occupe de votre gestion administrative et financière.
@@ -60,18 +60,31 @@ export default function Home() {
                 <Button size="lg" className="bg-primary hover:bg-primary/90" asChild>
                   <a href="#contact">Devis gratuit</a>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary/10" asChild>
                   <a href="https://calendly.com/nr-solutionsadmin" target="_blank" rel="noopener noreferrer">Rendez-vous découverte</a>
                 </Button>
               </div>
+              
+              {/* Bannière LinkedIn sous les boutons */}
+              <div className="mt-8">
+                <img 
+                  src="/banner.png" 
+                  alt="Bras droit administratif et financier des dirigeants de TPE et artisans" 
+                  className="w-full max-w-lg rounded-lg shadow-lg"
+                />
+              </div>
             </div>
-            <div className="relative space-y-6">
-              <img 
-                src="/banner.png" 
-                alt="Roxane - Assistante administrative et financière indépendante à Biarritz, Pays Basque" 
-                className="w-full rounded-lg shadow-2xl"
-              />
-              <div className="max-w-sm mx-auto">
+            
+            {/* Photo badge et workspace à droite */}
+            <div className="relative flex flex-col items-center gap-6">
+              <div className="relative">
+                <img 
+                  src="/roxane-badge.png" 
+                  alt="Roxane - Assistante administrative et financière indépendante à Biarritz" 
+                  className="w-48 h-48 rounded-full object-cover border-4 border-accent shadow-2xl"
+                />
+              </div>
+              <div className="w-full max-w-md">
                 <img 
                   src="/workspace.jpg" 
                   alt="Gestion administrative professionnelle" 
