@@ -178,12 +178,12 @@ export default function Home() {
               />
             </div>
             <div className="order-1 lg:order-2 space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
                 À propos
               </h2>
               <div className="space-y-4 text-lg text-foreground/80">
                 <p>
-                  Assistante administrative et financière indépendante, je mets mon expertise au service des dirigeants de TPE et artisans qui souhaitent se concentrer sur leur cœur de métier.
+                  Je suis Roxane, assistante administrative et financière indépendante. Je mets mon expertise au service des dirigeants de TPE et artisans qui souhaitent se concentrer sur leur cœur de métier.
                 </p>
                 <p>
                   Forte d'une expérience solide en comptabilité acquise dans le secteur automobile et moto, j'ai ensuite enrichi mon parcours par deux années en cabinet comptable. Durant cette période, j'ai géré les bilans d'un portefeuille d'une trentaine d'entreprises, tous secteurs confondus. Cette diversité m'a permis de développer une compréhension approfondie des enjeux spécifiques à chaque activité et de maîtriser les outils et processus essentiels à une gestion administrative et financière rigoureuse.
