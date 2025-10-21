@@ -385,7 +385,7 @@ export default function Home() {
               <p>&copy; {new Date().getFullYear()} NR Solutions Admin. Tous droits réservés.</p>
               <span className="hidden md:inline">•</span>
               <a href="/cgvps.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
-                Conditions Générales de Vente et de Prestation de Service
+                Conditions Générales
               </a>
             </div>
           </div>
