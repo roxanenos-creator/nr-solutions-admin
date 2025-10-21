@@ -65,12 +65,19 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative space-y-6">
               <img 
                 src="/banner.png" 
                 alt="Roxane - Assistante administrative et financière indépendante à Biarritz, Pays Basque" 
                 className="w-full rounded-lg shadow-2xl"
               />
+              <div className="max-w-sm mx-auto">
+                <img 
+                  src="/workspace.jpg" 
+                  alt="Gestion administrative professionnelle" 
+                  className="w-full rounded-lg shadow-lg"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -86,16 +93,9 @@ export default function Home() {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
               Gestion administrative externalisée, télésecrétariat professionnel et soutien administratif à distance pour TPE, PME et artisans du Pays Basque
             </p>
-            <p className="text-base text-muted-foreground max-w-2xl mx-auto mb-8">
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto mb-12">
               <strong>En solo ou en renfort :</strong> j'interviens de manière autonome ou en complément de votre équipe administrative et comptable existante pour renforcer vos services.
             </p>
-            <div className="max-w-lg mx-auto mb-12">
-              <img 
-                src="/workspace.jpg" 
-                alt="Gestion administrative et financière pour TPE et artisans - NR Solutions Admin" 
-                className="w-full rounded-lg shadow-xl"
-              />
-            </div>
           </div>
 
           {/* Compass Center with Services Around */}
