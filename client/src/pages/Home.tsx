@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, CheckCircle2, Clock, TrendingUp, Users, FileText, MessageSquare, Target } from "lucide-react";
+import { Mail, Phone, MapPin, CheckCircle2, Clock, TrendingUp, Users, FileText, MessageSquare, Target, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { SEOHead } from "@/components/SEOHead";
 import { StructuredData } from "@/components/StructuredData";
@@ -14,6 +14,8 @@ export default function Home() {
     phone: "",
     message: ""
   });
+
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,6 +36,7 @@ export default function Home() {
               <img src="/logo-gold.png" alt="NR Solutions Admin - Assistante administrative et financière Biarritz" className="h-12 w-auto" />
               <div className="text-2xl font-bold tracking-tight bg-gradient-to-r from-accent to-white bg-clip-text text-transparent">NR Solutions Admin</div>
             </div>
+            {/* Desktop Menu */}
             <div className="hidden md:flex gap-6 items-center">
               <a href="#accueil" className="hover:text-accent transition-colors">Accueil</a>
               <a href="#services" className="hover:text-accent transition-colors">Services</a>
@@ -41,7 +44,57 @@ export default function Home() {
               <a href="#apropos" className="hover:text-accent transition-colors">À propos</a>
               <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
             </div>
+            
+            {/* Mobile Menu Button */}
+            <button 
+              className="md:hidden p-2 hover:bg-primary/80 rounded-lg transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Menu"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
+          
+          {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 space-y-3 border-t border-primary-foreground/20 pt-4">
+              <a 
+                href="#accueil" 
+                className="block hover:text-accent transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Accueil
+              </a>
+              <a 
+                href="#services" 
+                className="block hover:text-accent transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Services
+              </a>
+              <a 
+                href="#formules" 
+                className="block hover:text-accent transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Formules
+              </a>
+              <a 
+                href="#apropos" 
+                className="block hover:text-accent transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                À propos
+              </a>
+              <a 
+                href="#contact" 
+                className="block hover:text-accent transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+            </div>
+          )}
         </div>
       </nav>
 
@@ -458,9 +511,9 @@ export default function Home() {
               <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img 
-                    src="/roxane-original.jpg" 
+                    src="/roxane-apropos.jpg" 
                     alt="Roxane - Assistante administrative et financière indépendante" 
-                    className="w-full h-auto"
+                    className="w-full h-auto object-cover"
                   />
                 </div>
               </div>
