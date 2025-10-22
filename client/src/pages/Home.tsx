@@ -104,7 +104,7 @@ export default function Home() {
           {/* Compass Center with Services Around in Circular Layout */}
           <div className="relative max-w-5xl mx-auto">
             {/* Desktop: Container with circular positioning - 4 cardinal points */}
-            <div className="hidden md:block relative" style={{ minHeight: '650px' }}>
+            <div className="hidden md:block relative" style={{ minHeight: '700px' }}>
               {/* Central Compass - Taille réduite */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
                 <div className="bg-accent/10 p-3 rounded-2xl border-4 border-accent/40 shadow-2xl">
@@ -123,7 +123,7 @@ export default function Home() {
               </div>
 
               {/* Nord - Gestion Administrative & Communication */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2" style={{ width: '240px' }}>
+              <div className="absolute left-1/2 transform -translate-x-1/2" style={{ top: '20px', width: '240px' }}>
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
                   <CardContent className="pt-4 pb-4 space-y-2">
                     <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
@@ -153,7 +153,7 @@ export default function Home() {
               </div>
 
               {/* Sud - Gestion RH & Organisation */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2" style={{ width: '240px' }}>
+              <div className="absolute left-1/2 transform -translate-x-1/2" style={{ bottom: '20px', width: '240px' }}>
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
                   <CardContent className="pt-4 pb-4 space-y-2">
                     <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
