@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, CheckCircle2, Clock, TrendingUp, Users, FileText } from "lucide-react";
+import { Mail, Phone, MapPin, CheckCircle2, Clock, TrendingUp, Users, FileText, MessageSquare, Target } from "lucide-react";
 import { useState } from "react";
 import { SEOHead } from "@/components/SEOHead";
 import { StructuredData } from "@/components/StructuredData";
@@ -103,110 +103,80 @@ export default function Home() {
 
           {/* Compass Center with Services Around in Circular Layout */}
           <div className="relative max-w-4xl mx-auto">
-            {/* Desktop: Container with circular positioning */}
-            <div className="hidden md:block relative" style={{ minHeight: '600px' }}>
+            {/* Desktop: Container with circular positioning - 4 cardinal points */}
+            <div className="hidden md:block relative" style={{ minHeight: '550px' }}>
               {/* Central Compass */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                <div className="bg-accent/10 p-4 rounded-2xl border-4 border-accent/40 shadow-2xl">
+                <div className="bg-accent/10 p-5 rounded-2xl border-4 border-accent/40 shadow-2xl">
                   <div className="flex flex-col items-center gap-2">
                     <img 
                       src="/compass.jpg" 
                       alt="Gardez le cap sur votre métier" 
-                      className="w-28 h-28 rounded-full object-cover shadow-lg border-4 border-accent/30"
+                      className="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-accent/30"
                     />
                     <div className="text-center">
-                      <p className="text-base font-bold text-primary mb-0.5">Gardez le cap</p>
+                      <p className="text-lg font-bold text-primary mb-0.5">Gardez le cap</p>
                       <p className="text-xs text-muted-foreground">Je m'occupe de l'administratif</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Service Cards positioned in circle - Top (12h) */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2" style={{ width: '220px' }}>
+              {/* Nord - Gestion Administrative & Communication */}
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2" style={{ width: '260px' }}>
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                  <CardContent className="pt-3 pb-3 space-y-1.5">
-                    <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                      <Clock className="w-4 h-4 text-primary" />
+                  <CardContent className="pt-4 pb-4 space-y-2">
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <MessageSquare className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="text-sm font-semibold text-primary text-center">Gestion Administrative</h3>
-                    <p className="text-xs text-muted-foreground text-center leading-tight">
-                      Messagerie, agenda, courrier, saisie, classement, rédaction.
+                    <h3 className="text-base font-semibold text-primary text-center">Gestion Administrative & Communication</h3>
+                    <p className="text-xs text-muted-foreground text-center leading-relaxed">
+                      Messagerie, agenda, courrier, saisie, classement, rédaction. Communication interne/externe, coordination.
                     </p>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Top Right (2h) */}
-              <div className="absolute" style={{ top: '80px', right: '40px', width: '220px' }}>
+              {/* Est - Gestion Financière & Comptable */}
+              <div className="absolute top-1/2 right-0 transform -translate-y-1/2" style={{ width: '260px' }}>
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                  <CardContent className="pt-3 pb-3 space-y-1.5">
-                    <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                      <TrendingUp className="w-4 h-4 text-primary" />
+                  <CardContent className="pt-4 pb-4 space-y-2">
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <TrendingUp className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="text-sm font-semibold text-primary text-center">Gestion Financière</h3>
-                    <p className="text-xs text-muted-foreground text-center leading-tight">
-                      Devis, factures, suivi paiements, préparation comptable.
+                    <h3 className="text-base font-semibold text-primary text-center">Gestion Financière & Comptable</h3>
+                    <p className="text-xs text-muted-foreground text-center leading-relaxed">
+                      Devis, factures, suivi paiements, préparation comptable. Relation avec l'expert-comptable.
                     </p>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Right (4h) */}
-              <div className="absolute top-1/2 right-0 transform -translate-y-1/2" style={{ width: '220px' }}>
+              {/* Sud - Gestion RH & Organisation */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2" style={{ width: '260px' }}>
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                  <CardContent className="pt-3 pb-3 space-y-1.5">
-                    <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                      <Users className="w-4 h-4 text-primary" />
+                  <CardContent className="pt-4 pb-4 space-y-2">
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <Users className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="text-sm font-semibold text-primary text-center">Gestion RH</h3>
-                    <p className="text-xs text-muted-foreground text-center leading-tight">
-                      Contrats, congés, paie, organismes sociaux.
+                    <h3 className="text-base font-semibold text-primary text-center">Gestion RH & Organisation</h3>
+                    <p className="text-xs text-muted-foreground text-center leading-relaxed">
+                      Contrats, congés, paie, organismes sociaux. Processus, outils, tableaux de bord, efficacité.
                     </p>
                   </CardContent>
                 </Card>
               </div>
 
-              {/* Bottom Right (6h) */}
-              <div className="absolute" style={{ bottom: '80px', right: '40px', width: '220px' }}>
+              {/* Ouest - Accompagnement Projet */}
+              <div className="absolute top-1/2 left-0 transform -translate-y-1/2" style={{ width: '260px' }}>
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                  <CardContent className="pt-3 pb-3 space-y-1.5">
-                    <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                      <CheckCircle2 className="w-4 h-4 text-primary" />
+                  <CardContent className="pt-4 pb-4 space-y-2">
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <Target className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="text-sm font-semibold text-primary text-center">Organisation</h3>
-                    <p className="text-xs text-muted-foreground text-center leading-tight">
-                      Processus, outils, tableaux de bord, efficacité.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Bottom (8h) */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2" style={{ width: '220px' }}>
-                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                  <CardContent className="pt-3 pb-3 space-y-1.5">
-                    <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                      <FileText className="w-4 h-4 text-primary" />
-                    </div>
-                    <h3 className="text-sm font-semibold text-primary text-center">Accompagnement Projet</h3>
-                    <p className="text-xs text-muted-foreground text-center leading-tight">
-                      Suivi projets, coordination prestataires.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Bottom Left (10h) */}
-              <div className="absolute" style={{ bottom: '80px', left: '40px', width: '220px' }}>
-                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                  <CardContent className="pt-3 pb-3 space-y-1.5">
-                    <div className="w-8 h-8 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                      <Mail className="w-4 h-4 text-primary" />
-                    </div>
-                    <h3 className="text-sm font-semibold text-primary text-center">Communication</h3>
-                    <p className="text-xs text-muted-foreground text-center leading-tight">
-                      Interne, externe, rédaction, coordination.
+                    <h3 className="text-base font-semibold text-primary text-center">Accompagnement Projet</h3>
+                    <p className="text-xs text-muted-foreground text-center leading-relaxed">
+                      Suivi de projets spécifiques, coordination avec prestataires externes, gestion de missions ciblées.
                     </p>
                   </CardContent>
                 </Card>
@@ -232,76 +202,52 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Service cards in grid */}
+              {/* Service cards in grid - 4 blocs */}
               <div className="grid grid-cols-1 gap-4">
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                  <CardContent className="pt-4 pb-4 space-y-2">
-                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                      <Clock className="w-5 h-5 text-primary" />
+                  <CardContent className="pt-5 pb-5 space-y-3">
+                    <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <MessageSquare className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="text-base font-semibold text-primary text-center">Gestion Administrative</h3>
+                    <h3 className="text-lg font-semibold text-primary text-center">Gestion Administrative & Communication</h3>
                     <p className="text-sm text-muted-foreground text-center leading-relaxed">
-                      Messagerie, agenda, courrier, saisie, classement, rédaction.
+                      Messagerie, agenda, courrier, saisie, classement, rédaction. Communication interne/externe, coordination.
                     </p>
                   </CardContent>
                 </Card>
 
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                  <CardContent className="pt-4 pb-4 space-y-2">
-                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                      <TrendingUp className="w-5 h-5 text-primary" />
+                  <CardContent className="pt-5 pb-5 space-y-3">
+                    <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <TrendingUp className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="text-base font-semibold text-primary text-center">Gestion Financière</h3>
+                    <h3 className="text-lg font-semibold text-primary text-center">Gestion Financière & Comptable</h3>
                     <p className="text-sm text-muted-foreground text-center leading-relaxed">
-                      Devis, factures, suivi paiements, préparation comptable.
+                      Devis, factures, suivi paiements, préparation comptable. Relation avec l'expert-comptable.
                     </p>
                   </CardContent>
                 </Card>
 
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                  <CardContent className="pt-4 pb-4 space-y-2">
-                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                      <Users className="w-5 h-5 text-primary" />
+                  <CardContent className="pt-5 pb-5 space-y-3">
+                    <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <Users className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="text-base font-semibold text-primary text-center">Gestion RH</h3>
+                    <h3 className="text-lg font-semibold text-primary text-center">Gestion RH & Organisation</h3>
                     <p className="text-sm text-muted-foreground text-center leading-relaxed">
-                      Contrats, congés, paie, organismes sociaux.
+                      Contrats, congés, paie, organismes sociaux. Processus, outils, tableaux de bord, efficacité.
                     </p>
                   </CardContent>
                 </Card>
 
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                  <CardContent className="pt-4 pb-4 space-y-2">
-                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                      <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <CardContent className="pt-5 pb-5 space-y-3">
+                    <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
+                      <Target className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="text-base font-semibold text-primary text-center">Organisation</h3>
+                    <h3 className="text-lg font-semibold text-primary text-center">Accompagnement Projet</h3>
                     <p className="text-sm text-muted-foreground text-center leading-relaxed">
-                      Processus, outils, tableaux de bord, efficacité.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                  <CardContent className="pt-4 pb-4 space-y-2">
-                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                      <FileText className="w-5 h-5 text-primary" />
-                    </div>
-                    <h3 className="text-base font-semibold text-primary text-center">Accompagnement Projet</h3>
-                    <p className="text-sm text-muted-foreground text-center leading-relaxed">
-                      Suivi projets, coordination prestataires.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
-                  <CardContent className="pt-4 pb-4 space-y-2">
-                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
-                      <Mail className="w-5 h-5 text-primary" />
-                    </div>
-                    <h3 className="text-base font-semibold text-primary text-center">Communication</h3>
-                    <p className="text-sm text-muted-foreground text-center leading-relaxed">
-                      Interne, externe, rédaction, coordination.
+                      Suivi de projets spécifiques, coordination avec prestataires externes, gestion de missions ciblées.
                     </p>
                   </CardContent>
                 </Card>
