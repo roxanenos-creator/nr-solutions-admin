@@ -131,7 +131,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-sm font-semibold text-primary text-center leading-tight">Gestion Administrative & Communication</h3>
                     <p className="text-xs text-muted-foreground text-center leading-relaxed">
-                      Messagerie, agenda, courrier, saisie, classement, rédaction. Communication interne/externe, coordination.
+                      Agenda, classement. Communication interne/externe, coordination.
                     </p>
                   </CardContent>
                 </Card>
@@ -211,7 +211,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-lg font-semibold text-primary text-center">Gestion Administrative & Communication</h3>
                     <p className="text-sm text-muted-foreground text-center leading-relaxed">
-                      Messagerie, agenda, courrier, saisie, classement, rédaction. Communication interne/externe, coordination.
+                      Agenda, classement. Communication interne/externe, coordination.
                     </p>
                   </CardContent>
                 </Card>
