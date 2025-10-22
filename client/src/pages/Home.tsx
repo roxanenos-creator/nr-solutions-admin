@@ -90,7 +90,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-12 bg-background">
+      <section id="services" className="pt-28 pb-12 bg-background">
         <div className="container max-w-6xl">
           <div className="text-center mb-6">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-2">
@@ -258,7 +258,7 @@ export default function Home() {
       </section>
 
       {/* Formules Section */}
-      <section id="formules" className="py-20 bg-background">
+      <section id="formules" className="pt-28 pb-20 bg-background">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -416,7 +416,7 @@ export default function Home() {
       </section>
 
       {/* À propos Section */}
-      <section id="apropos" className="py-20 bg-accent/10">
+      <section id="apropos" className="pt-28 pb-20 bg-accent/10">
         <div className="container">
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -469,8 +469,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section - Option B */}
-      <section id="contact" className="py-20 bg-background">
+         {/* Contact Section */}
+      <section id="contact" className="pt-28 pb-20 bg-background">
         <div className="container max-w-5xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
