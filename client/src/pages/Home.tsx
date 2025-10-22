@@ -102,34 +102,34 @@ export default function Home() {
           </div>
 
           {/* Compass Center with Services Around in Circular Layout */}
-          <div className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-5xl mx-auto">
             {/* Desktop: Container with circular positioning - 4 cardinal points */}
-            <div className="hidden md:block relative" style={{ minHeight: '550px' }}>
-              {/* Central Compass */}
+            <div className="hidden md:block relative" style={{ minHeight: '650px' }}>
+              {/* Central Compass - Taille réduite */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                <div className="bg-accent/10 p-5 rounded-2xl border-4 border-accent/40 shadow-2xl">
-                  <div className="flex flex-col items-center gap-2">
+                <div className="bg-accent/10 p-3 rounded-2xl border-4 border-accent/40 shadow-2xl">
+                  <div className="flex flex-col items-center gap-1.5">
                     <img 
                       src="/compass.jpg" 
                       alt="Gardez le cap sur votre métier" 
-                      className="w-32 h-32 rounded-full object-cover shadow-lg border-4 border-accent/30"
+                      className="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-accent/30"
                     />
                     <div className="text-center">
-                      <p className="text-lg font-bold text-primary mb-0.5">Gardez le cap</p>
-                      <p className="text-xs text-muted-foreground">Je m'occupe de l'administratif</p>
+                      <p className="text-sm font-bold text-primary mb-0">Gardez le cap</p>
+                      <p className="text-xs text-muted-foreground">sur votre métier</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Nord - Gestion Administrative & Communication */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2" style={{ width: '260px' }}>
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2" style={{ width: '240px' }}>
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
                   <CardContent className="pt-4 pb-4 space-y-2">
                     <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
                       <MessageSquare className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="text-base font-semibold text-primary text-center">Gestion Administrative & Communication</h3>
+                    <h3 className="text-sm font-semibold text-primary text-center leading-tight">Gestion Administrative & Communication</h3>
                     <p className="text-xs text-muted-foreground text-center leading-relaxed">
                       Messagerie, agenda, courrier, saisie, classement, rédaction. Communication interne/externe, coordination.
                     </p>
@@ -138,13 +138,13 @@ export default function Home() {
               </div>
 
               {/* Est - Gestion Financière & Comptable */}
-              <div className="absolute top-1/2 right-0 transform -translate-y-1/2" style={{ width: '260px' }}>
+              <div className="absolute top-1/2 right-0 transform -translate-y-1/2" style={{ width: '240px' }}>
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
                   <CardContent className="pt-4 pb-4 space-y-2">
                     <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
                       <TrendingUp className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="text-base font-semibold text-primary text-center">Gestion Financière & Comptable</h3>
+                    <h3 className="text-sm font-semibold text-primary text-center leading-tight">Gestion Financière & Comptable</h3>
                     <p className="text-xs text-muted-foreground text-center leading-relaxed">
                       Devis, factures, suivi paiements, préparation comptable. Relation avec l'expert-comptable.
                     </p>
@@ -153,13 +153,13 @@ export default function Home() {
               </div>
 
               {/* Sud - Gestion RH & Organisation */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2" style={{ width: '260px' }}>
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2" style={{ width: '240px' }}>
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
                   <CardContent className="pt-4 pb-4 space-y-2">
                     <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
                       <Users className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="text-base font-semibold text-primary text-center">Gestion RH & Organisation</h3>
+                    <h3 className="text-sm font-semibold text-primary text-center leading-tight">Gestion RH & Organisation</h3>
                     <p className="text-xs text-muted-foreground text-center leading-relaxed">
                       Contrats, congés, paie, organismes sociaux. Processus, outils, tableaux de bord, efficacité.
                     </p>
@@ -168,13 +168,13 @@ export default function Home() {
               </div>
 
               {/* Ouest - Accompagnement Projet */}
-              <div className="absolute top-1/2 left-0 transform -translate-y-1/2" style={{ width: '260px' }}>
+              <div className="absolute top-1/2 left-0 transform -translate-y-1/2" style={{ width: '240px' }}>
                 <Card className="border-2 hover:border-accent transition-all hover:shadow-lg">
                   <CardContent className="pt-4 pb-4 space-y-2">
                     <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mx-auto">
                       <Target className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="text-base font-semibold text-primary text-center">Accompagnement Projet</h3>
+                    <h3 className="text-sm font-semibold text-primary text-center leading-tight">Accompagnement Projet</h3>
                     <p className="text-xs text-muted-foreground text-center leading-relaxed">
                       Suivi de projets spécifiques, coordination avec prestataires externes, gestion de missions ciblées.
                     </p>
