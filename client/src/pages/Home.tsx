@@ -46,7 +46,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section avec photo badge */}
-      <section id="accueil" className="relative bg-gradient-to-br from-accent/20 to-background py-20">
+      <section id="accueil" className="relative bg-gradient-to-br from-accent/20 to-background pt-28 pb-20">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
